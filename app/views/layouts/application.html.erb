@@ -8,8 +8,36 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Inspiration</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Tips</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Recycleable Items</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">How to Compost</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">References</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
     <%= yield %>
   </body>
 </html>
