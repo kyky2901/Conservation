@@ -37,7 +37,20 @@
     </ul>
   </div>
 </nav>
-
+<br class="clear" />
+  <div class="container">
     <%= yield %>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="row float-right">
+        <p class="text-muted">
+        <%= link_to 'Volunteer', '#', class: 'volunteer' %>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <%= link_to 'Contact', '#', class: 'contact' %>
+        </p>
+      </div>
+    </div>
+  </div>
   </body>
 </html>
