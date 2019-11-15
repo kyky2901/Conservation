@@ -7,6 +7,9 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fauna+One|Itim&display=swap" rel="stylesheet">
   </head>
   <body>
 
@@ -57,9 +60,9 @@
     <div class="container">
       <div class="row float-right">
         <p class="text-muted">
-        <%= link_to 'Volunteer', '#', class: 'volunteer' %>
+        <%= link_to 'Volunteer', volunteer_path , class: 'volunteer' %>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <%= link_to 'Contact', '#', class: 'contact' %>
+        <%= link_to 'Contact', contact_path, class: 'contact' %>
         </p>
       </div>
     </div>
