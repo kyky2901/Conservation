@@ -1,2 +1,3 @@
 class Inspiration < ApplicationRecord
+  
 end
