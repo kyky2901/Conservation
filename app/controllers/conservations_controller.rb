@@ -10,4 +10,10 @@ class ConservationsController < ApplicationController
 
   def recycleable_items
   end
+
+  def contact
+  end
+
+  def volunteer
+  end
 end
