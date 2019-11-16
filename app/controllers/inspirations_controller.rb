@@ -8,7 +8,10 @@ class InspirationsController < ApplicationController
   end
 
   def create
-    Inspiration.create(inspiration_params)
+    @inspiration = Inspiration.create(inspiration_params)
+    if @inspiration.invalid?
+      flash[:error] = '<strong>Could not save</strong> the data you entered is invalid.'
+    end
     redirect_to inspirations_path
   end
 
