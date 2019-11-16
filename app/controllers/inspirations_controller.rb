@@ -6,4 +6,15 @@ class InspirationsController < ApplicationController
   def new
     @inspiration = Inspiration.new
   end
+
+  def create
+    Inspiration.create(inspiration_params)
+    redirect_to inspirations_path
+  end
+
+  private
+
+  def inspiration_params
+    params.require(:inspiration).permit(:saying, :author)
+  end
 end
