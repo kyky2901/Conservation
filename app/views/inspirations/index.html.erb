@@ -1,4 +1,32 @@
 <h1><%= @inspiration.saying %></h1>
 <h2><%= @inspiration.author %></h2>
-<%= link_to 'Contribute', new_inspiration_path %>
+<%= link_to 'Contribute', '#' , data: {toggle: 'modal', target: '#exampleModal'} %>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Contribute something inspirational!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <%= simple_form_for Inspiration.new do |f| %>
+      <div class="modal-body">
+        
+          <%= f.input :saying %>
+          <%= f.input :author %>
+          <br />
+          <%= f.submit 'Create', class: 'btn btn-success' %>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+      <% end %>
+      
+    </div>
+  </div>
+</div>

@@ -3,10 +3,6 @@ class InspirationsController < ApplicationController
     @inspiration = Inspiration.order("RANDOM()").first
   end
 
-  def new
-    @inspiration = Inspiration.new
-  end
-
   def create
     @inspiration = Inspiration.create(inspiration_params)
     if @inspiration.invalid?
